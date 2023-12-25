@@ -13,7 +13,7 @@ def save_palette(colors, name, LCD):
         # Write the RGB bytes to the BytesIO object
         file_buffer.write(rgb_bytes)
 
-    # Write the LCDoff and footer using the first color from BG (see Analogue documentation)
+    # Write the LCD off and the footer (see Analogue documentation)
     lcd_off_footer = bytes.fromhex(LCD[1:]) + b'\x81\x41\x50\x47\x42'
     file_buffer.write(lcd_off_footer)
 
@@ -83,7 +83,7 @@ obB3[1:], obB2[1:], obB1[1:], obB0[1:],  # OBJ2
 bg3[1:], bg2[1:], bg1[1:], bg0[1:],  # Window [same as BG]
 ]
 
-file_name = st.text_input("File Name:")
+file_name = st.text_input("", placeholder="Palette Name")
 
 if file_name:
     palette_data = save_palette(colors_to_save, file_name, LCD)
@@ -98,7 +98,7 @@ Game Boy games have three layers:
 - a "main" object layer (e.g., for characters and enemies);
 - a secondary object layer (for small effects or objects, e.g., the whip in _Castlevania_).
 
-The black & white Game Boy uses the same 4-shader palette for all of them. The Analogue Pocket (and the Game Boy Color) allows you to assign a 4-color palette to _each_ layer. Moreover, you can also decide the color of the LCD turned off.
+The black & white Game Boy uses the same 4-shader palette for all of them. The Analogue Pocket (and the Game Boy Color) allows you to assign a 4-color palette to _each_ layer. Moreover, you can also choose the color of the LCD turned off.
 
 The app uses the BG3 color for LCD by default, following the community-made GBC and SGB palettes. By default, the app also assigns the BG palette to OB1, and the OB1 palette to OB2. This is to make it easy to create a simple GB 4-shader palette without fancy colors for characters or enemies.
 
