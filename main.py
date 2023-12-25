@@ -1,7 +1,7 @@
 import streamlit as st
 from io import BytesIO
 
-def save_palette(colors):
+def save_palette(colors, name):
     # Get the first color from BG
     first_bg_color = colors[0]
 
@@ -22,7 +22,7 @@ def save_palette(colors):
     st.download_button(
         label="Download Palette",
         data=file_buffer.getvalue(),
-        file_name="MyPalette.bin",
+        file_name=name+".pal",
         key="download_button"
     )
 
@@ -87,6 +87,6 @@ bg3[1:], bg2[1:], bg1[1:], bg0[1:],  # Window [same as BG]
 file_name = st.text_input("File Name:")
 
 if file_name:
-    palette_data = save_palette(colors_to_save)
+    palette_data = save_palette(colors_to_save, file_name)
 
 
