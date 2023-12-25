@@ -1,4 +1,4 @@
 # Simple Palette Maker
-Simple Palette Maker lets you create custom palettes for black & white Game Boy games, to be used with [Analogue Pocket](https://www.analogue.co/developer/docs/custom-palettes). 
+Simple Palette Maker lets the user create custom palettes to colorize black & white Game Boy games. The downloaded palettes followed [Analogue Pocket](https://www.analogue.co/developer/docs/custom-palettes) documentation, and can be used with it.
 
-Powered by Streamlit. You can try it [here](https://simplepalettemaker.streamlit.app/)!
+Powered by Streamlit. You can try the app [here](https://simplepalettemaker.streamlit.app/)!
