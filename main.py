@@ -90,17 +90,17 @@ if file_name:
 
 st.subheader("How to use")
 st.markdown("""
-This app lets you create .pal files to be used with the Analogue Pocket.
+This app lets you create .pal files for the Analogue Pocket.
 
 Game Boy games have three layers:
 
 - a background layer;
 - a "main" object layer (e.g., for characters and enemies);
-- a secondary object layer (for small effects or objects, e.g., the whip in Castlevania).
+- a secondary object layer (for small effects or objects, e.g., the whip in _Castlevania_).
 
-The OG Game Boy uses the same 4-shader palette for all of them. Game Boy Color (and the Analogue Pocket) allows you to assign a 4-color palette to _each_ layer. Moreover, you can also decide the color of the LCD turned off.
+The black & white Game Boy uses the same 4-shader palette for all of them. The Analogue Pocket (and the Game Boy Color) allows you to assign a 4-color palette to _each_ layer. Moreover, you can also decide the color of the LCD turned off.
 
-By default, the app uses for LCD the same color as BG3, following the community-made GBC and SGB palettes. The app also assigns the BG palette to OB1, and the OB1 palette to OB2. This is to make it easy to create a simple GB 4-shader palette without fancy colors for characters or enemies.
+The app uses the BG3 color for LCD by default, following the community-made GBC and SGB palettes. By default, the app also assigns the BG palette to OB1, and the OB1 palette to OB2. This is to make it easy to create a simple GB 4-shader palette without fancy colors for characters or enemies.
 
 """)
 
