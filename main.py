@@ -14,7 +14,7 @@ def save_palette(colors, name, LCD):
         file_buffer.write(rgb_bytes)
 
     # Write the LCDoff and footer using the first color from BG (see Analogue documentation)
-    lcd_off_footer = bytes.fromhex(LCD) + b'\x81\x41\x50\x47\x42'
+    lcd_off_footer = bytes.fromhex(LCD[1:]) + b'\x81\x41\x50\x47\x42'
     file_buffer.write(lcd_off_footer)
 
     st.download_button(
