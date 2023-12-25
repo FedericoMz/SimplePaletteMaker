@@ -86,7 +86,7 @@ bg3[1:], bg2[1:], bg1[1:], bg0[1:],  # Window [same as BG]
 file_name = st.text_input("File Name:")
 
 if file_name:
-    palette_data = save_palette(colors_to_save, file_name)
+    palette_data = save_palette(colors_to_save, file_name, LCD)
 
 st.subheader("How to use")
 st.markdown("""
