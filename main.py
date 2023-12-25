@@ -1,9 +1,7 @@
 import streamlit as st
 from io import BytesIO
 
-def save_palette(colors, name):
-    # Get the first color from BG
-    first_bg_color = colors[0]
+def save_palette(colors, name, LCD):
 
     # Create a BytesIO object to store the binary data
     file_buffer = BytesIO()
@@ -16,7 +14,7 @@ def save_palette(colors, name):
         file_buffer.write(rgb_bytes)
 
     # Write the LCDoff and footer using the first color from BG (see Analogue documentation)
-    lcd_off_footer = bytes.fromhex(first_bg_color) + b'\x81\x41\x50\x47\x42'
+    lcd_off_footer = bytes.fromhex(LCD) + b'\x81\x41\x50\x47\x42'
     file_buffer.write(lcd_off_footer)
 
     st.download_button(
@@ -58,24 +56,25 @@ bg1 = col2.color_picker('', '#ffffff', key=1)
 bg2 = col3.color_picker('', '#ffffff', key=2)
 bg3 = col4.color_picker('', '#ffffff', key=3)
 
+LCD = col_dummy.color_picker('LCD', bg3, key=12)
 
 col5, col6, col7, col8, col9 = st.columns(5)
 
 with col5:
     st.header("OB0")
-obA0 = col6.color_picker('', '#ffffff', key=4)
-obA1 = col7.color_picker('', '#ffffff', key=5)
-obA2 = col8.color_picker('', '#ffffff', key=6)
-obA3 = col9.color_picker('', '#ffffff', key=7)
+obA0 = col6.color_picker('', bg0, key=4)
+obA1 = col7.color_picker('', bg1, key=5)
+obA2 = col8.color_picker('', bg2, key=6)
+obA3 = col9.color_picker('', bg3, key=7)
 
 colA, colB, colC, colD, colE = st.columns(5)
 
 with colA:
     st.header("OB1")
-obB0 = colB.color_picker('', '#ffffff', key=8)
-obB1 = colC.color_picker('', '#ffffff', key=9)
-obB2 = colD.color_picker('', '#ffffff', key=10)
-obB3 = colE.color_picker('', '#ffffff', key=11)
+obB0 = colB.color_picker('', obA0, key=8)
+obB1 = colC.color_picker('', obA1, key=9)
+obB2 = colD.color_picker('', obA2, key=10)
+obB3 = colE.color_picker('', obA3, key=11)
 
 colors_to_save = [
 bg3[1:], bg2[1:], bg1[1:], bg0[1:],  # BG
@@ -88,5 +87,22 @@ file_name = st.text_input("File Name:")
 
 if file_name:
     palette_data = save_palette(colors_to_save, file_name)
+
+st.subheader("How to use")
+st.markdown("""
+This app lets you create .pal files to be used with the Analogue Pocket.
+
+Game Boy games have three layers:
+
+- a background layer;
+- a "main" object layer (e.g., for characters and enemies);
+- a secondary object layer (for small effects or objects, e.g., the whip in Castlevania).
+
+The OG Game Boy uses the same 4-shader palette for all of them. Game Boy Color (and the Analogue Pocket) allows you to assign a 4-color palette to _each_ layer. Moreover, you can also decide the color of the LCD turned off.
+
+By default, the app uses for LCD the same color as BG3, following the community-made GBC and SGB palettes. The app also assigns the BG palette to OB1, and the OB1 palette to OB2. This is to make it easy to create a simple GB 4-shader palette without fancy colors for characters or enemies.
+
+""")
+
 
 
