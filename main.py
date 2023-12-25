@@ -54,7 +54,7 @@ with col0:
 bg0 = col1.color_picker('', '#ffffff', key=0)
 bg1 = col2.color_picker('', '#ffffff', key=1)
 bg2 = col3.color_picker('', '#ffffff', key=2)
-bg3 = col4.color_picker('', '#ffffff', key=3)
+bg3 = col4.color_picker('', '#000000', key=3)
 
 LCD = col_dummy.color_picker('LCD', bg3, key=12)
 
@@ -101,6 +101,8 @@ Game Boy games have three layers:
 The black & white Game Boy uses the same 4-shader palette for all of them. The Analogue Pocket (and the Game Boy Color) allows you to assign a 4-color palette to _each_ layer. Moreover, you can also choose the color of the LCD turned off.
 
 The app uses the BG3 color for LCD by default, following the community-made GBC and SGB palettes. By default, the app also assigns the BG palette to OB1, and the OB1 palette to OB2. This is to make it easy to create a simple GB 4-shader palette without fancy colors for characters or enemies.
+
+Most official palettes have color 0 set to white and color 3 set to black for all the layers.
 
 """)
 
