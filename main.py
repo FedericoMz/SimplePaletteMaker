@@ -83,7 +83,7 @@ obB3[1:], obB2[1:], obB1[1:], obB0[1:],  # OBJ2
 bg3[1:], bg2[1:], bg1[1:], bg0[1:],  # Window [same as BG]
 ]
 
-file_name = st.text_input("", placeholder="Write here a palette name and press enter to download")
+file_name = st.text_input("", placeholder="Write here the palette name and press enter to download")
 
 if file_name:
     palette_data = save_palette(colors_to_save, file_name, LCD)
