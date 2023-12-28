@@ -43,6 +43,7 @@ def read_pal_file(uploaded_file):
     return colors
 
 uploaded_file = st.sidebar.file_uploader("Upload an existing .pal file (optional)", type="pal")
+st.sidebar.subheader("Options")
 GB_mode = st.sidebar.checkbox('Super Game Boy Mode')
 invert = st.sidebar.checkbox('Inverted Palette')
 
