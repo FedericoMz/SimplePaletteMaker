@@ -183,7 +183,7 @@ On the other hand, the Game Boy Color colorized Game Boy games by assigning diff
 
 You can also choose the color of the LCD screen while off. By default, the app uses the BG3 color, following the community-made GBC and SGB palettes. 
             
-The _Inverted Palette_ option inverts the order of colors (e.g, the downloaded palette will have Color 0 will be assigned the Color 3).
+The _Inverted Palette_ option inverts the order of colors (e.g, the downloaded palette will have Color 0 assigned to Color 3).
 
 Most official palettes have Color 0 set to white and Color 3 set to black for all the layers.
 
