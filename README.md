@@ -1,5 +1,5 @@
 # Simple Palette Maker
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://pix2beats.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://simplepalettemaker.streamlit.app/)
 [![Python 3.9](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/downloads/release/python-390/)
 ![License: BSD 3-Clause](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)
 
