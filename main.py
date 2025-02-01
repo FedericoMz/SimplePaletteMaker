@@ -39,7 +39,7 @@ def read_pal_file(uploaded_file):
     return colors
 
 st.set_page_config(page_title="Simple Palette Maker", page_icon=":art:")
-logo_image = st.sidebar.image("logo.png", use_column_width=True)
+logo_image = st.sidebar.image("logo.png", use_container_width=True)
 
 uploaded_file = st.sidebar.file_uploader("Upload an existing .pal file (optional)", type="pal")
 st.sidebar.subheader("Options")
