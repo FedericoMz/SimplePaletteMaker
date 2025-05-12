@@ -177,7 +177,7 @@ Game Boy games have three layers:
 - main objects such as characters and enemies (OB1);
 - minor objects, like effects or weapons (OB2).
 
-The Super Game Boy colorized Game Boy games by [assigning the same 4-color palette to BG, OB1, and OB2](https://www.deviantart.com/thewolfbunny64/art/Game-Boy-Palette-Super-Famicom-Supreme-934519944). If you want to use this "simple" colorization, enable _Super Game Boy Mode_.
+The Super Game Boy colorized Game Boy games by [assigning the same 4-color palette to BG, OB1, and OB2](https://wildleoknight.itch.io/super-game-boy-palettes). If you want to use this "simple" colorization, enable _Super Game Boy Mode_.
 
 On the other hand, the Game Boy Color colorized Game Boy games by assigning different palettes to BG, OB1, and OB2 (e.g., in [_Metroid II_](https://d2rd7etdn93tqb.cloudfront.net/wp-content/uploads/2023/02/metroid-2-game-boy-fighting-omega-metroid-022223.jpg) the BG is blue, and everything else red-ish).
 
